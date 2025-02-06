@@ -1,9 +1,12 @@
 package user.entity;
 
 import audit.BaseEntity;
+import board.entity.Board;
+import comment.entity.Comment;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,6 +14,7 @@ import java.util.List;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class User extends BaseEntity {
@@ -22,7 +26,7 @@ public class User extends BaseEntity {
     private Long userId;
 
     @Column(nullable = false)
-    private String name;
+    private String nickName;
 
     // enum -> Class이다. 컴파일 時 Class로 변환
 
